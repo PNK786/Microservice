@@ -1,7 +1,8 @@
 spring:
   application:
     name: "eurekaserver"
-  config: "optional:configserver:http://localhost:8071/"
+  config:
+    import: "optional:configserver:http://localhost:8071/"
 
 management:
   endpoints:
