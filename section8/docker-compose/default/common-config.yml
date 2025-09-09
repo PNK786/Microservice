@@ -17,7 +17,7 @@ services:
       service: microservice-base-config
     depends_on:
       configserver:
-        condition: service_health
+        condition: service_healthy
     environment:
       SPRING_PROFILES_ACTIVE: default
       SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
@@ -26,9 +26,7 @@ services:
     extends:
       service: microservice-configserver-config
     depends_on:
-      configserver:
-        condition: service_health
       eurekaserver:
-        condition: service_health
+        condition: service_healthy
     environment:
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
