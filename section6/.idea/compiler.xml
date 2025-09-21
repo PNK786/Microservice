@@ -21,8 +21,8 @@
         <module name="accounts" />
         <module name="cards (1)" />
         <module name="loans (1)" />
-        <module name="loans" />
         <module name="accounts (1)" />
+        <module name="loans" />
       </profile>
     </annotationProcessing>
   </component>
